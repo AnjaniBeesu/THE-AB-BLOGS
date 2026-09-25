@@ -9,10 +9,12 @@ a { color:inherit; text-decoration:none; }
 .ad-rail { min-height:100vh; border-right:1px solid var(--line); display:flex; justify-content:center; align-items:flex-start; padding-top:150px; position:sticky; top:0; height:100vh; }
 .ad-rail span, .mobile-ad { font:500 9px/1 DM Mono,monospace; letter-spacing:.16em; color:#aaa69d; }
 .content-column { width:100%; min-width:0; }
-/* Landing page: exact 25% ad rail + 75% content on desktop. */
-.landing-shell { min-height:100vh; display:grid; grid-template-columns:25% 75%; gap:0; justify-content:stretch; padding:0; width:100%; }
-.landing-ad-rail { width:100%; border-right:1px solid var(--line); border-left:0; }
-.landing-content { width:100%; min-width:0; padding:0 clamp(32px,7vw,110px); }
+
+/* LANDING PAGE ONLY: full viewport, exact 25% ad / 75% content split. */
+.landing-shell { display:grid; grid-template-columns:25vw 75vw; width:100vw; min-width:100vw; min-height:100vh; margin:0; padding:0; gap:0; justify-content:initial; }
+.landing-shell .landing-ad-rail { grid-column:1; width:25vw; min-width:25vw; min-height:100vh; height:100vh; margin:0; padding-top:150px; border-right:1px solid var(--line); border-left:0; position:sticky; top:0; }
+.landing-shell .landing-content { grid-column:2; width:75vw; min-width:0; padding:0 clamp(32px,7vw,110px); }
+
 .site-header { height:100px; border-bottom:1px solid var(--line); display:flex; align-items:center; justify-content:space-between; }
 .site-header p, .article-header a:last-child { color:var(--muted); font-size:12px; }
 .wordmark { font:500 17px DM Mono,monospace; letter-spacing:-.04em; }
@@ -43,9 +45,11 @@ a { color:inherit; text-decoration:none; }
 .article-body { max-width:680px; }
 .article-body p { font-size:18px; line-height:1.9; margin:0 0 30px; }
 @media (max-width: 900px) {
-  .site-shell, .article-shell, .landing-shell { grid-template-columns:1fr; padding:0 22px; display:block; }
+  .site-shell, .article-shell { grid-template-columns:1fr; padding:0 22px; display:block; }
+  .landing-shell { display:block; width:100%; min-width:0; padding:0 22px; margin:0; }
+  .landing-shell .landing-ad-rail { display:none; }
+  .landing-shell .landing-content { width:100%; padding:0; }
   .ad-rail { display:none; }
-  .landing-content { padding:0; }
   .content-column { padding-bottom:70px; }
   .site-header { height:76px; }
   .site-header p { display:none; }
