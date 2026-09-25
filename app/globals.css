@@ -9,9 +9,10 @@ a { color:inherit; text-decoration:none; }
 .ad-rail { min-height:100vh; border-right:1px solid var(--line); display:flex; justify-content:center; align-items:flex-start; padding-top:150px; position:sticky; top:0; height:100vh; }
 .ad-rail span, .mobile-ad { font:500 9px/1 DM Mono,monospace; letter-spacing:.16em; color:#aaa69d; }
 .content-column { width:100%; min-width:0; }
-.landing-shell { grid-template-columns:minmax(0,25vw) minmax(0,75vw); gap:0; justify-content:stretch; padding:0; }
-.landing-ad-rail { border-right:1px solid var(--line); border-left:0; }
-.landing-content { width:100%; padding:0 7vw; }
+/* Landing page: exact 25% ad rail + 75% content on desktop. */
+.landing-shell { min-height:100vh; display:grid; grid-template-columns:25% 75%; gap:0; justify-content:stretch; padding:0; width:100%; }
+.landing-ad-rail { width:100%; border-right:1px solid var(--line); border-left:0; }
+.landing-content { width:100%; min-width:0; padding:0 clamp(32px,7vw,110px); }
 .site-header { height:100px; border-bottom:1px solid var(--line); display:flex; align-items:center; justify-content:space-between; }
 .site-header p, .article-header a:last-child { color:var(--muted); font-size:12px; }
 .wordmark { font:500 17px DM Mono,monospace; letter-spacing:-.04em; }
