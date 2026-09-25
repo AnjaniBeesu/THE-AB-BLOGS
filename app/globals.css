@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root { --bg:#f5f3ed; --ink:#151515; --muted:#77736b; --line:#d8d4ca; --accent:#ff5b35; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:Manrope,Arial,sans-serif; }
+a { color:inherit; text-decoration:none; }
+.site-shell { min-height:100vh; display:grid; grid-template-columns:180px minmax(0,860px); justify-content:center; gap:48px; padding:0 32px; }
+.ad-rail { min-height:100vh; border-right:1px solid var(--line); display:flex; justify-content:center; align-items:flex-start; padding-top:150px; position:sticky; top:0; height:100vh; }
+.ad-rail span, .mobile-ad { font:500 9px/1 DM Mono,monospace; letter-spacing:.16em; color:#aaa69d; }
+.content-column { width:100%; min-width:0; }
+.site-header { height:100px; border-bottom:1px solid var(--line); display:flex; align-items:center; justify-content:space-between; }
+.site-header p, .article-header a:last-child { color:var(--muted); font-size:12px; }
+.wordmark { font:500 17px DM Mono,monospace; letter-spacing:-.04em; }
+.hero { padding:100px 0 110px; border-bottom:1px solid var(--line); }
+.eyebrow { font:500 10px DM Mono,monospace; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); margin:0 0 24px; }
+.hero h1 { font-size:clamp(48px,7vw,88px); line-height:.98; letter-spacing:-.07em; margin:0; max-width:800px; }
+.hero-copy { max-width:480px; margin:34px 0 0; color:var(--muted); font-size:16px; line-height:1.7; }
+.section-heading { display:flex; justify-content:space-between; padding:22px 0; border-bottom:1px solid var(--line); font:500 10px DM Mono,monospace; color:var(--muted); letter-spacing:.12em; }
+.post-card { display:grid; grid-template-columns:1fr auto; gap:30px; padding:36px 0; border-bottom:1px solid var(--line); transition:padding .2s ease; }
+.post-card:hover { padding-left:10px; }
+.post-date { font:400 10px DM Mono,monospace; color:var(--muted); }
+.post-card h2 { font-size:32px; letter-spacing:-.04em; margin:10px 0; }
+.post-card p { color:var(--muted); line-height:1.65; max-width:650px; margin:0; }
+.arrow { font-size:24px; }
+.author-footer { margin-top:120px; padding:50px 0 70px; border-top:1px solid var(--line); }
+.author-footer h2 { font-size:34px; letter-spacing:-.05em; margin:0 0 12px; }
+.author-footer > p:not(.eyebrow) { color:var(--muted); max-width:500px; line-height:1.7; }
+.links { display:flex; flex-wrap:wrap; gap:20px; margin:28px 0; font:500 11px DM Mono,monospace; }
+.links a:hover { color:var(--accent); }
+.author-footer small { color:#aaa69d; font:400 10px DM Mono,monospace; }
+.mobile-ad { display:none; }
+.article-shell { grid-template-columns:180px minmax(0,760px); }
+.article-header { height:100px; }
+.article-meta { display:flex; gap:20px; margin-top:80px; font:400 10px DM Mono,monospace; color:var(--muted); }
+.article-title { font-size:clamp(46px,7vw,82px); line-height:1; letter-spacing:-.065em; margin:20px 0 25px; }
+.article-excerpt { color:var(--muted); font-size:18px; line-height:1.65; max-width:650px; }
+.article-tags { display:flex; gap:9px; margin:28px 0 70px; font:400 10px DM Mono,monospace; color:var(--accent); }
+.article-body { max-width:680px; }
+.article-body p { font-size:18px; line-height:1.9; margin:0 0 30px; }
+@media (max-width: 900px) {
+  .site-shell, .article-shell { grid-template-columns:1fr; padding:0 22px; display:block; }
+  .ad-rail { display:none; }
+  .content-column { padding-bottom:70px; }
+  .site-header { height:76px; }
+  .site-header p { display:none; }
+  .hero { padding:70px 0 75px; }
+  .hero h1 { font-size:clamp(46px,13vw,72px); }
+  .post-card h2 { font-size:26px; }
+  .mobile-ad { display:flex; position:fixed; z-index:20; left:0; right:0; bottom:0; height:34px; background:rgba(245,243,237,.96); border-top:1px solid var(--line); align-items:center; justify-content:center; }
+  .article-meta { margin-top:55px; }
+  .article-title { font-size:clamp(44px,12vw,70px); }
+  .article-body p { font-size:17px; }
+}
