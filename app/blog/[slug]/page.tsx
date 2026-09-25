@@ -50,11 +50,11 @@ function AuthorFooter() {
     <footer className="author-footer">
       <p className="eyebrow">ABOUT THE HUMAN</p>
       <h2>Anjani Beesu</h2>
-      <p>CS sophomore exploring the things that catch her curiosity — building random projects, experimenting with new technology, and turning whatever rabbit hole she falls into into something worth writing about. When she is not coding, she is probably reading a light novel or getting lost in a webcomic.</p>
+      <p>A CS sophomore exploring the things that catch my curiosity. I like to spend my time building random projects, experimenting with new technology, and turning whatever rabbit hole I fall into into something worth writing about. When I'm not coding, I'm probably reading a light novel or getting lost in a webcomic.</p>
       <div className="links">
         <a href="https://github.com/AnjaniBeesu" target="_blank" rel="noreferrer">GitHub ↗</a>
-        <a href="#">LinkedIn ↗</a>
-        <a href="mailto:YOUR_EMAIL_HERE">Email ↗</a>
+        <a href="https://www.linkedin.com/in/anjanibeesu/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a href="mailto:anjanibeesu@gmail.com">Email ↗</a>
       </div>
       <small>AB Blogs belongs to Anjani Beesu.</small>
     </footer>
