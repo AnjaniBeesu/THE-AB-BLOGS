@@ -31,7 +31,6 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
 
   return (
     <main className="site-shell article-shell">
-      <aside className="ad-rail" aria-label="Advertisement space"><span>ADVERTISEMENT</span></aside>
       <article className="content-column">
         <header className="site-header article-header"><Link href="/" className="wordmark">AB BLOGS</Link><Link href="/">← all posts</Link></header>
         <div className="article-meta"><span>{blog.date}</span><span>{blog.readTime}</span></div>
@@ -43,7 +42,6 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
         </div>
         <AuthorFooter />
       </article>
-      <div className="mobile-ad" aria-label="Advertisement space">ADVERTISEMENT</div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </main>
   );
