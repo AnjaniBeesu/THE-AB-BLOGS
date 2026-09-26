@@ -63,10 +63,8 @@ function SiteFooter() {
     <footer className="site-footer">
       <nav aria-label="Legal and site links">
         <Link href="/privacy">Privacy Policy</Link>
-        <a href="https://docs.github.com/site-policy/github-terms/github-terms-of-service" target="_blank" rel="noreferrer">Terms</a>
-        <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noreferrer">Privacy</a>
-        <a href="https://github.com/security" target="_blank" rel="noreferrer">Security</a>
-        <button type="button">Manage cookies</button>
+        <Link href="/terms">Terms</Link>
+        <Link href="/cookies">Manage cookies</Link>
       </nav>
     </footer>
   );
