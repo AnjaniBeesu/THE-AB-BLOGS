@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -32,7 +31,6 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
   return (
     <main className="site-shell article-shell">
       <article className="content-column">
-        <header className="site-header article-header"><Link href="/" className="wordmark">AB BLOGS</Link><Link href="/">← all posts</Link></header>
         <div className="article-meta"><span>{blog.date}</span><span>{blog.readTime}</span></div>
         <h1 className="article-title">{blog.title}</h1>
         <p className="article-excerpt">{blog.excerpt}</p>
