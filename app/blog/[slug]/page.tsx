@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { blogs, getBlog } from "@/lib/blogs";
 
 export function generateStaticParams() {
@@ -36,7 +38,9 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
         <h1 className="article-title">{blog.title}</h1>
         <p className="article-excerpt">{blog.excerpt}</p>
         <div className="article-tags">{blog.tags.map((tag) => <span key={tag}>#{tag}</span>)}</div>
-        <div className="article-body">{blog.body.map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div>
+        <div className="article-body">
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{blog.body.join("\n\n")}</ReactMarkdown>
+        </div>
         <AuthorFooter />
       </article>
       <div className="mobile-ad" aria-label="Advertisement space">ADVERTISEMENT</div>
