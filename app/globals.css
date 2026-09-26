@@ -35,6 +35,18 @@ a { color:inherit; text-decoration:none; }
 .links { display:flex; flex-wrap:wrap; gap:20px; margin:28px 0; font:500 11px DM Mono,monospace; }
 .links a:hover { color:var(--accent); }
 .author-footer small { color:#aaa69d; font:400 10px DM Mono,monospace; }
+
+/* Minimal legal footer, styled as part of the AB Blogs system. */
+.site-footer { padding:0 0 42px; }
+.site-footer-line { height:1px; background:var(--line); margin-bottom:24px; }
+.site-footer-inner { display:flex; align-items:center; justify-content:space-between; gap:32px; }
+.site-footer-label { color:#aaa69d; font:400 9px/1 DM Mono,monospace; letter-spacing:.14em; white-space:nowrap; }
+.site-footer nav { display:flex; align-items:center; justify-content:flex-end; flex-wrap:wrap; gap:0; }
+.site-footer nav a, .site-footer nav button { position:relative; padding:0 16px; color:var(--muted); background:none; border:0; font:500 10px/1.4 DM Mono,monospace; cursor:pointer; transition:color .2s ease; }
+.site-footer nav a:first-child { padding-left:0; }
+.site-footer nav a:hover, .site-footer nav button:hover { color:var(--accent); }
+.site-footer nav a + a::before, .site-footer nav button::before { content:"/"; position:absolute; left:0; color:var(--line); pointer-events:none; }
+.site-footer nav button { padding-right:0; }
 .mobile-ad { display:none; }
 .article-shell { grid-template-columns:180px minmax(0,760px); }
 .article-header { height:100px; }
@@ -69,6 +81,13 @@ a { color:inherit; text-decoration:none; }
   .hero h1 { font-size:clamp(46px,13vw,72px); }
   .post-card h2 { font-size:26px; }
   .mobile-ad { display:flex; position:fixed; z-index:20; left:0; right:0; bottom:0; height:34px; background:rgba(245,243,237,.96); border-top:1px solid var(--line); align-items:center; justify-content:center; }
+  .site-footer { padding-bottom:56px; }
+  .site-footer-inner { display:block; }
+  .site-footer-label { display:block; margin-bottom:20px; }
+  .site-footer nav { justify-content:flex-start; row-gap:14px; }
+  .site-footer nav a, .site-footer nav button { padding-left:14px; padding-right:14px; }
+  .site-footer nav a:first-child { padding-left:0; }
+  .site-footer nav a:nth-child(3)::before { display:none; }
   .article-meta { margin-top:55px; }
   .article-title { font-size:clamp(44px,12vw,70px); }
   .article-body p { font-size:17px; }
