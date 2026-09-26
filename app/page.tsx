@@ -16,7 +16,7 @@ export default function Home() {
 
         <section className="hero">
           <p className="eyebrow">THE INTERNET CORNER</p>
-          <h1>Things I build,<br />break &amp; obsess over.</h1>
+          <h1>Things I build,<br />think &amp; obsess over.</h1>
           <p className="hero-copy">I&apos;m Anjani, a CS sophomore exploring technology one weird rabbit hole at a time.</p>
         </section>
 
