@@ -10,7 +10,9 @@ export default function Home() {
 
       <section className="content-column landing-content">
         <header className="site-header">
-          <Link href="/" className="wordmark">AB BLOGS</Link>
+          <Link href="/" className="wordmark" aria-label="The AB Blogs home">
+            <img src="/icon.svg" alt="AB" className="site-logo" />
+          </Link>
           <p>random talks by <strong>Anjani Beesu</strong></p>
         </header>
 
