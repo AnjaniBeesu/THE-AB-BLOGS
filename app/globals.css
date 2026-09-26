@@ -17,7 +17,8 @@ a { color:inherit; text-decoration:none; }
 
 .site-header { height:100px; border-bottom:1px solid var(--line); display:flex; align-items:center; justify-content:space-between; }
 .site-header p, .article-header a:last-child { color:var(--muted); font-size:12px; }
-.wordmark { font:500 17px DM Mono,monospace; letter-spacing:-.04em; }
+.wordmark { display:flex; align-items:center; width:max-content; }
+.site-logo { display:block; width:48px; height:48px; object-fit:contain; }
 .hero { padding:100px 0 110px; border-bottom:1px solid var(--line); }
 .eyebrow { font:500 10px DM Mono,monospace; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); margin:0 0 24px; }
 .hero h1 { font-size:clamp(48px,7vw,88px); line-height:.98; letter-spacing:-.07em; margin:0; max-width:800px; }
@@ -77,6 +78,7 @@ a { color:inherit; text-decoration:none; }
   .content-column { padding-bottom:70px; }
   .site-header { height:76px; }
   .site-header p { display:none; }
+  .site-logo { width:40px; height:40px; }
   .hero { padding:70px 0 75px; }
   .hero h1 { font-size:clamp(46px,13vw,72px); }
   .post-card h2 { font-size:26px; }
