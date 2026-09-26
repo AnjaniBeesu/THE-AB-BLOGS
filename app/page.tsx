@@ -9,13 +9,6 @@ export default function Home() {
       </aside>
 
       <section className="content-column landing-content">
-        <header className="site-header">
-          <Link href="/" className="wordmark" aria-label="The AB Blogs home">
-            <img src="/icon.svg" alt="AB" className="site-logo" />
-          </Link>
-          <p>random talks by <strong>Anjani Beesu</strong></p>
-        </header>
-
         <section className="hero">
           <p className="eyebrow">THE INTERNET CORNER</p>
           <h1>Things I build,<br />think &amp; obsess over.</h1>
@@ -35,8 +28,6 @@ export default function Home() {
             </Link>
           ))}
         </section>
-
-        <SiteFooter />
       </section>
     </main>
   );
@@ -55,17 +46,5 @@ function AuthorFooter() {
       </div>
       <small>AB Blogs belongs to Anjani Beesu.</small>
     </div>
-  );
-}
-
-function SiteFooter() {
-  return (
-    <footer className="site-footer">
-      <nav aria-label="Legal and site links">
-        <Link href="/privacy">Privacy Policy</Link>
-        <Link href="/terms">Terms</Link>
-        <Link href="/cookies">Manage cookies</Link>
-      </nav>
-    </footer>
   );
 }
