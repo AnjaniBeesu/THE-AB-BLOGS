@@ -3,6 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {"dev": "next dev", "build": "next build", "start": "next start", "lint": "eslint ."},
-  "dependencies": {"@mdx-js/loader": "^3.1.0", "@mdx-js/react": "^3.1.0", "@vercel/analytics": "latest", "next": "latest", "react": "latest", "react-dom": "latest"},
+  "dependencies": {"@mdx-js/loader": "^3.1.0", "@mdx-js/react": "^3.1.0", "@vercel/analytics": "latest", "next": "latest", "react": "latest", "react-dom": "latest", "react-markdown": "latest", "remark-gfm": "latest"},
   "devDependencies": {"@types/node": "latest", "@types/react": "latest", "@types/react-dom": "latest", "eslint": "latest", "eslint-config-next": "latest", "typescript": "latest"}
 }
