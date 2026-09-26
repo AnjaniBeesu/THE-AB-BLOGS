@@ -35,6 +35,7 @@ export default function Home() {
         </section>
 
         <AuthorFooter />
+        <SiteFooter />
       </section>
       <div className="mobile-ad" aria-label="Advertisement space">ADVERTISEMENT</div>
     </main>
@@ -53,6 +54,20 @@ function AuthorFooter() {
         <a href="mailto:anjanibeesu@gmail.com">Email ↗</a>
       </div>
       <small>AB Blogs belongs to Anjani Beesu.</small>
+    </footer>
+  );
+}
+
+function SiteFooter() {
+  return (
+    <footer className="site-footer">
+      <nav aria-label="Legal and site links">
+        <Link href="/privacy">Privacy Policy</Link>
+        <a href="https://docs.github.com/site-policy/github-terms/github-terms-of-service" target="_blank" rel="noreferrer">Terms</a>
+        <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noreferrer">Privacy</a>
+        <a href="https://github.com/security" target="_blank" rel="noreferrer">Security</a>
+        <button type="button">Manage cookies</button>
+      </nav>
     </footer>
   );
 }
